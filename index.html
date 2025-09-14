@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de JS</title>
+</head>
+<body>
+    <script>
+        console.log ("hello world") 
+        console.warn("attention, cette action peut avoir des conséquences imprévues")
+        console.error("une erreur s'est produite dans le code")
+        console.info("information, le serveur a été lancé avec succès")
+        // alert("ceci est un message d'alerte")
+        var name="Nedjima"
+        console.log ("mon prénom est ",name)
+        console.log ("la longueur de mon prénom est: ", name.length)
+        var age=10
+        console.log ("mon age est: ", age)
+        console.log ("mon prénom est "+ name+ "et j'ai "+ age,"ans.")
+        console.log (`mon nom est ${name} et j'ai ${age} ans.`)
+        var username=prompt ("veuillez saisir votre nom")
+        alert ("votre nom est: " +username)
+        // conditions
+        const time= new Date().getHours()
+        console.log(time)
+        if(time<10){
+            console.log("Bonjour")
+        }
+        else if(time<18){
+            console.log("bonne journée")
+        }
+        else{
+            console.log("bonne soirée")
+        }
+
+
+
+    </script>
+</body>
+</html>
