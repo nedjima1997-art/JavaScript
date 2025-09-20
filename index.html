@@ -23,43 +23,113 @@
         // alert ("votre nom est: " +username)
 
         // conditions
-        // const time= new Date().getHours()
-        // console.log(time)
-        // if(time<10){
-        //     console.log("Bonjour")
-        // }
-        // else if(time<18){
-        //     console.log("Bonne journée")
-        // }
-        // else{
-        //     console.log("Bonne soirée")
-        // }
-
-        // exercice 1 calculer la moyenne
-        var premiere_note = Number(prompt("Veuillez saisir la note du premier module"))
-        while(premiere_note>20 || premiere_note<0){ 
-            premiere_note = Number(prompt("Incorrect, veuillez saisir une note entre 0 et 20"))
-        }        
-        var deuxieme_note = Number(prompt("Veuillez saisir la note du deuxième module"))
-        while(deuxieme_note>20 || deuxieme_note<0){
-            deuxieme_note = Number(prompt("Incorrect, veuillez saisir une note entre 0 et 20"))
+        const time= new Date().getHours()
+        console.log(time)
+        if(time<10){
+            console.log("Bonjour")
         }
-        var moy=(premiere_note+deuxieme_note)/2
-        if(moy==10){
-            console.log("Passable,votre moyenne est: ",moy)
-        }
-        else if(moy<10){
-            console.log("Ajourné, malheureusement votre moyenne est: ",moy)
+        else if(time<18){
+            console.log("Bonne journée")
         }
         else{
-            console.log("Bravo, vous avez réussi,votre moyenne est: ",moy)
+            console.log("Bonne soirée")
         }
+
+        // avec conditions ternaires
+        (time<10) ? console.log("Bonjour") : (time<18) ? console.log("Bonne journée") :console.log("Bonne soirée")
+
+
+        
+        // // exercice 1 calculer la moyenne
+        // var premiere_note = Number(prompt("Veuillez saisir la note du premier module"))
+        // while(premiere_note>20 || premiere_note<0){ 
+        //     premiere_note = Number(prompt("Incorrect, veuillez saisir une note entre 0 et 20"))
+        // }        
+        // var deuxieme_note = Number(prompt("Veuillez saisir la note du deuxième module"))
+        // while(deuxieme_note>20 || deuxieme_note<0){
+        //     deuxieme_note = Number(prompt("Incorrect, veuillez saisir une note entre 0 et 20"))
+        // }
+        // var moy=(premiere_note+deuxieme_note)/2
+        // if(moy==10){
+        //     console.log("Passable,votre moyenne est: ",moy)
+        // }
+        // else if(moy<10){
+        //     console.log("Ajourné, malheureusement votre moyenne est: ",moy)
+        // }
+        // else{
+        //     console.log("Bravo, vous avez réussi,votre moyenne est: ",moy)
+        // }
 
         // exercice 2 afficher la date et l'heure
         const heure= new Date()
         console.log("nous sommes le", heure.getDate(),"/", heure.getMonth(),"/", heure.getFullYear())
         console.log("il est", heure.getHours(),":", heure.getMinutes(),":",heure.getSeconds())
+
+
+        var nombre= "5"
+        if (nombre==5){
+            console.log ("comparaison non stricte, la valeur est égale après conversion")
+        }
+        else{
+            console.log ("comparaison non stricte, la valeur est différente")
+        }
+
+        if (nombre===5){
+            console.log ("comparaison stricte, la valeur et le type sont égaux après conversion")
+        }
+        else{
+            console.log ("comparaison stricte, la valeur ou le type est différente")
+        }
+
+        // condition ternaires
+        nombre ===3 ? console.log("la valeur et le type sont égaux après conversion") : console.log("la valeur ou le type est différente")
+
+        // switch case (selon que) permet d'evaluer une variable selon sa valeur) 
+        var couleur = "Orange"
+        switch (couleur) {
+            case "rouge": console.log("arretez le feu est rouge")                
+                break;
+            case "orange": console.log("attention le feu est orange")                
+                break;
+            case "vert": console.log("allez-y le feu est vert")                
+                break;
+            default: console.log("couleur inconnue")
+                break;
+        }
+        // les fonctions
+        function salutation(){
+            console.log("Bonjour, je suis la meilleure developpeuse")
+        }
+
+        salutation()
+        function sommes(nbr1, nbr2){
+            return nbr1+nbr2
+        }
+        console.log(sommes(1,10))
+
+
+        function carré(x){
+            return x*x 
+        }
+        console.log(carré(25))
         
+        function increment(y){
+            return y+1
+        }
+        console.log(increment(7))
+
+        function partie(p){
+            if (p%2 === 0){
+                console.log(`${p} est un chiffre paire `)
+            }
+            else{
+                console.log(`${p}  est un chiffre impaire `)
+            }
+        }
+        partie(23)
+     
+
+
 
     </script>
 </body>
