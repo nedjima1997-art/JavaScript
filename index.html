@@ -18,23 +18,48 @@
         var age=10
         console.log ("mon age est: ", age)
         console.log ("mon prénom est "+ name+ "et j'ai "+ age,"ans.")
-        console.log (`mon nom est ${name} et j'ai ${age} ans.`)
-        var username=prompt ("veuillez saisir votre nom")
-        alert ("votre nom est: " +username)
+        console.log (`mon nom est ${name}   et j'ai ${age} ans.`)
+        // var username=prompt ("veuillez saisir votre nom")
+        // alert ("votre nom est: " +username)
+
         // conditions
-        const time= new Date().getHours()
-        console.log(time)
-        if(time<10){
-            console.log("Bonjour")
+        // const time= new Date().getHours()
+        // console.log(time)
+        // if(time<10){
+        //     console.log("Bonjour")
+        // }
+        // else if(time<18){
+        //     console.log("Bonne journée")
+        // }
+        // else{
+        //     console.log("Bonne soirée")
+        // }
+
+        // exercice 1 calculer la moyenne
+        var premiere_note = Number(prompt("Veuillez saisir la note du premier module"))
+        while(premiere_note>20 || premiere_note<0){ 
+            premiere_note = Number(prompt("Incorrect, veuillez saisir une note entre 0 et 20"))
+        }        
+        var deuxieme_note = Number(prompt("Veuillez saisir la note du deuxième module"))
+        while(deuxieme_note>20 || deuxieme_note<0){
+            deuxieme_note = Number(prompt("Incorrect, veuillez saisir une note entre 0 et 20"))
         }
-        else if(time<18){
-            console.log("bonne journée")
+        var moy=(premiere_note+deuxieme_note)/2
+        if(moy==10){
+            console.log("Passable,votre moyenne est: ",moy)
+        }
+        else if(moy<10){
+            console.log("Ajourné, malheureusement votre moyenne est: ",moy)
         }
         else{
-            console.log("bonne soirée")
+            console.log("Bravo, vous avez réussi,votre moyenne est: ",moy)
         }
 
-
+        // exercice 2 afficher la date et l'heure
+        const heure= new Date()
+        console.log("nous sommes le", heure.getDate(),"/", heure.getMonth(),"/", heure.getFullYear())
+        console.log("il est", heure.getHours(),":", heure.getMinutes(),":",heure.getSeconds())
+        
 
     </script>
 </body>
